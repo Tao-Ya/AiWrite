@@ -39,12 +39,12 @@ flags.DEFINE_string(
 
 # 输入TF示例文件(可以是通配符或逗号分隔)
 flags.DEFINE_string(
-    "input_file", path + "/dataset/wiki_train_wiki19_0000.tfrecord",
+    "input_file", path + "/dataset/wiki_train_xk_0000.tfrecord",
     "Input TF example files (can be a glob or comma separated).")
 
 # 将要写入模型检查点的输出目录
 flags.DEFINE_string(
-    "output_dir", path + "/models/wiki",
+    "output_dir", path + "/models/xuekao",
     "The output directory where the model checkpoints will be written.")
 
 ## Other parameters
@@ -71,7 +71,7 @@ flags.DEFINE_float("learning_rate", 5e-5, "The initial learning rate for adafact
 
 # 训练步数
 # flags.DEFINE_integer("num_train_steps", 100000, "Number of training steps.")
-flags.DEFINE_integer("num_train_steps", 100, "Number of training steps.")
+flags.DEFINE_integer("num_train_steps", 500, "Number of training steps.")
 
 # 热训练步数
 # flags.DEFINE_integer("num_warmup_steps", 10000, "Number of warmup steps.")
@@ -80,7 +80,7 @@ flags.DEFINE_integer("num_warmup_steps", 10, "Number of warmup steps.")
 # 多久保存一次模型的检查点
 # flags.DEFINE_integer("save_checkpoints_steps", 1000,
 #                      "How often to save the model checkpoint.")
-flags.DEFINE_integer("save_checkpoints_steps", 100,
+flags.DEFINE_integer("save_checkpoints_steps", 200,
                      "How often to save the model checkpoint.")
 
 # 在每个估计器调用中要做多少步

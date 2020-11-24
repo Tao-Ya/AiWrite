@@ -167,7 +167,7 @@ def buffered_and_sliding_window_article_iterator(tokenizer, final_desired_size=1
 
 # OK now write the tfrecord file
 total_written = 0
-train_file = args.base_fn + 'train_wiki19_{:04d}.tfrecord'.format(args.fold)
+train_file = args.base_fn + 'train_xk_{:04d}.tfrecord'.format(args.fold)
 with TFRecordWriter(train_file) as train_writer:
     for article in buffered_and_sliding_window_article_iterator(tokenizer,
                                                                 final_desired_size=args.max_seq_length + 1):

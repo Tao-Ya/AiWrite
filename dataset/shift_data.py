@@ -50,7 +50,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--filepath', default=op.dirname(op.dirname(op.abspath(__file__))) + "/data", type=str,
                         required=False, help='数据集目录地址')
-    parser.add_argument('--outfile', default=op.dirname(op.dirname(op.abspath(__file__))) + "/data/wiki.json", type=str,
+    parser.add_argument('--outfile', default=op.dirname(op.dirname(op.abspath(__file__))) + "/data/xk.json", type=str,
                         required=False, help='生成文件地址')
     args = parser.parse_args()
     print('args:\n' + args.__repr__())
